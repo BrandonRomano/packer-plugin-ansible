@@ -2,17 +2,23 @@ The Ansible plugin allows users to execute as a provisioner during a Packer buil
 
 
 ### Installation
-Packer v1.7.0 and later
+To install this plugin add this code into your Packer configuration and run [packer init](/packer/docs/commands/init)
 
 ```hcl
 packer {
-    required_plugins {
-        ansible = {
-          version = "~> 1"
-          source = "github.com/hashicorp/ansible"
-        }
+  required_plugins {
+    ansible = {
+      version = "~> 1"
+      source = "github.com/hashicorp/ansible"
     }
+  }
 }
+```
+
+Alternatively, you can use `packer plugins install` to manage installation of this plugin.
+
+```sh
+packer plugins install github.com/hashicorp/ansible
 ```
 
 ### Components
